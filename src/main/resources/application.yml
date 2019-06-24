@@ -1,0 +1,12 @@
+hibernate:
+  dialect: org.hibernate.dialect.MySQL57Dialect
+  format_sql: true      # Pretty print the SQL in the log and console.
+  show_sql: true        # Write all SQL statements to console.
+  hbm2ddl.auto: create    # !Danger : Do not change this without sufficient reason
+
+datasource:
+#  driver-class-name: com.mysql.jdbc.Driver
+  type: com.zaxxer.hikari.HikariDataSource
+  jdbcUrl: jdbc:log4jdbc:mysql://localhost:3306/test?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf8&connectTimeout=5000&socketTimeout=5000&autoReconnect=true&useSSL=false
+  username: blockchainlab
+  password: blockchainlab
